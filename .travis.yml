@@ -1,24 +1,24 @@
-sudo: required
+# sudo: required
 
-services:
-  - docker
+# services:
+#   - docker
 
-before_install:
-  - docker build -t rahulbarick/docker-react -f Dockerfile.dev .
+# before_install:
+#   - docker build -t rahulbarick/docker-react -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true rahulbarick/docker-react npm run test
+# script:
+#   - docker run -e CI=true rahulbarick/docker-react npm run test
 
-deploy:
-  provider: elasticbeanstalk
-  region: "eu-west-1"
-  app: "docker-react"
-  env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-eu-west-1-246802837414"
-  bucket_path: "docker-react"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "eu-west-1"
+#   app: "docker-react"
+#   env: "Dockerreact-env"
+#   bucket_name: "elasticbeanstalk-eu-west-1-246802837414"
+#   bucket_path: "docker-react"
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: $AWS_SECRET_KEY
 
   
