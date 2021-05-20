@@ -11,8 +11,6 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id: ASIATS5UYN6TB2IZBCLL
-  secret_access_key: sjhUa3RkM214VY98dx3y3DREqgQ+G2ZzFPHixevj
   region: "eu-west-1"
   app: "docker-react"
   env: "Dockerreact-env"
@@ -20,5 +18,7 @@ deploy:
   bucket_path: "docker-react"
   on:
     branch: master
+  access_key_id: ASIATS5UYN6TB2IZBCLL
+  secret_access_key: sjhUa3RkM214VY98dx3y3DREqgQ+G2ZzFPHixevj
 
   
