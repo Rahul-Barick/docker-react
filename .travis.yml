@@ -15,11 +15,11 @@ deploy:
     secure: $AWS_ACCESS_KEY
   secret_access_key: 
     secure: "$AWS_SECRET_KEY"
-  session_token: $AWS_SESSION_TOKEN
+  # session_token: $AWS_SESSION_TOKEN
   region: "eu-west-1"
   app: "docker-react"
   env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-eu-west-1-246802837414"
+  bucket: "elasticbeanstalk-eu-west-1-246802837414"
   bucket_path: "docker-react"
   on:
     branch: master
