@@ -15,6 +15,7 @@ deploy:
     secure: $AWS_ACCESS_KEY
   secret_access_key: 
     secure: "$AWS_SECRET_KEY"
+  session_token: $AWS_SESSION_TOKEN
   region: "eu-west-1"
   app: "docker-react"
   env: "Dockerreact-env"
@@ -24,4 +25,3 @@ deploy:
     branch: master
   edge: true
   
-  # session_token: $AWS_SESSION_TOKEN
