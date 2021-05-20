@@ -1,0 +1,11 @@
+Fix for npm run test for CI
+https://create-react-app.dev/docs/running-tests/#linux-macos-bash
+
+Add CI=true env.
+https://docs.docker.com/engine/reference/run/#env-environment-variables
+
+https://forums.aws.amazon.com/ann.jspa?annID=8136
+that will affect our single container application. Among these changes was adding the full support of using Docker Compose to provision a production AWS environment. This means that Elastic Beanstalk will no longer first look for a Dockerfile, it will first look for a docker-compose file and attempt to build and run a container from it.
+
+When creating our Elastic Beanstalk environment, we need to select Docker running on 64bit Amazon Linux instead of Docker running on 64bit Amazon Linux 2. 
+This will ensure that our container is built using the Dockerfile and not the compose file.
