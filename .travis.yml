@@ -22,5 +22,6 @@ deploy:
   bucket_path: "docker-react"
   on:
     branch: master
+  edge: true
   
   # session_token: $AWS_SESSION_TOKEN
