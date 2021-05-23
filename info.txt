@@ -9,3 +9,5 @@ that will affect our single container application. Among these changes was addin
 
 When creating our Elastic Beanstalk environment, we need to select Docker running on 64bit Amazon Linux instead of Docker running on 64bit Amazon Linux 2. 
 This will ensure that our container is built using the Dockerfile and not the compose file.
+
+https://docs.docker.com/develop/develop-images/multistage-build/#name-your-build-stages
